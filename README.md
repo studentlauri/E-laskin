@@ -21,3 +21,7 @@ PG/VG = 38ml
 Nikotiinia = 2ml
 Tiivistettä  = 10ml
 Kokonaismäärä = 38ml + 2ml + 10ml = 50ml
+
+Ohjelman käyttö
+
+![Alt text](https://imgur.com/FlnYNUc)
