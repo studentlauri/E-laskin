@@ -24,4 +24,4 @@ Kokonaismäärä = 38ml + 2ml + 10ml = 50ml
 
 Ohjelman käyttö
 
-![Alt text](https://imgur.com/FlnYNUc)
+[Imgur](https://i.imgur.com/I8PI1Gd.jpg)
