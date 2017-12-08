@@ -17,19 +17,48 @@ public class NikotiiniLaskuri {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //ohjelma kysyy E-nesteen halutun kokonaismäärän
-        String maara = JOptionPane.showInputDialog("Syötä haluamasi määrä millilitroina");
-        //ohjelma kysyy E-nesteen halutun nikotiini pitoisuuden prosentteina
-        String nikotiini = JOptionPane.showInputDialog("Syötä haluamasi nikotiini pitoisuus prosentteina");
-        // ohjelma kysyy tiivisteen  pakkauksesta löytyvän suositus sekoitus suhteen (esim. 20%)
-        String tiiviste = JOptionPane.showInputDialog("Syötä tiivisteen määrä prosentteina");
+        double tiivari;
+        double nctn;
+        double ml;
         
         
-        //muutetaan arvot stringeistä doubleiksi
-        double ml = Double.parseDouble(maara);
-        double nctn = Double.parseDouble(nikotiini)/100; //jaetaan sadalla jotta saadaan kerroin jolla kerrotaan kokonais määrä ja saadaan haluttu millilitra määrä
-                                                           //esim. nikotiinipitoisuus 4% / 100 = 0.04... kerrotaan kokonais ml kertoimella... 50ml x 0.04 = 2ml nikotiinia
-        double tiivari = Double.parseDouble(tiiviste)/100;
+         JOptionPane.showMessageDialog(null, "Nikotiinilaskuri" + "\n" + "Nesteen maximi määrä 100ml" + "\n" + "Nikotiinin maximi määrä 10%" + "\n" + "Tiivisteen maximi määrä 30%");
+        
+        //millilitran syöttö
+        while (true) {
+            try {
+                ml = Double.parseDouble(JOptionPane.showInputDialog("Syötä haluamasi määrä millilitroina 10-100"));
+                    break; // toistaa kysymyksen jos input on muu kuin numero
+                    } 
+                        catch (NumberFormatException ignore) {
+                        }
+                             catch (NullPointerException ignore){
+                                }
+        }
+        //nikotiinin syöttö
+        while (true) {
+            try {
+                nctn = Double.parseDouble(JOptionPane.showInputDialog("Syötä haluamasi nikotiini pitoisuus prosentteina"))/100;
+                    break; // toistaa kysymyksen jos input on muu kuin numero
+                    } 
+                        catch (NumberFormatException ignore) {
+                        }
+                            catch (NullPointerException ignore){
+                            }
+        }
+        //tiivisteen syöttö
+        while (true) {
+            try {
+                tiivari = Double.parseDouble(JOptionPane.showInputDialog("Syötä tiivisteen määrä prosentteina"))/100;
+                    break; // toistaa kysymyksen jos input on muu kuin numero
+                    } 
+                        catch (NumberFormatException ignore) {
+                        }
+                            catch (NullPointerException ignore){
+                            }
+        }
+        
+      
         
         Laskin laskin = new Laskin(ml,nctn,tiivari); //luodaan uusi laskin ja syötetään arvot constructoria varten
         laskin.laske(); //kutsutaan laskimen methodi
