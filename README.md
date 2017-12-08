@@ -1,5 +1,5 @@
-# E-laskin
-Laskin sähkötupakka nesteen valmistusta varten
+## E-laskin
+#Laskin sähkötupakka nesteen valmistusta varten
 
 Sähkötupakka neste koostuu yleisesti kolmesta ainesosasta: PG/VG nesteestä, nikotiinista ja makutiivisteestä.
 
@@ -22,6 +22,6 @@ Nikotiinia = 2ml
 Tiivistettä  = 10ml
 Kokonaismäärä = 38ml + 2ml + 10ml = 50ml
 
-Ohjelman käyttö
+###Ohjelman käyttö
 
-[Imgur](https://i.imgur.com/I8PI1Gd.jpg)
+
